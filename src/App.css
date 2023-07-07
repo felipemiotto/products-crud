@@ -13,18 +13,38 @@
   color: white;
 }
 
+.Products {
+  margin: 0 15vw;
+}
+
 .Product-form {
   display: flex;
   flex-direction: column;
-  margin: 0 30vw;
 }
 
 .Product-form input {
-  width: 100%;
   margin-bottom: 10px;
 }
 
 .Product-form button {
   width: 100%;
   margin-top: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 800px) {
+  .Products {
+    margin: 0 10vw;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .Products {
+    margin: 0 5vw;
+  }
 }

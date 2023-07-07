@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import './App.css';
-import { ProductForm } from './components/ProductForm';
+import { Products } from './components/Products';
 
 const App: FC = () => {
   return (
     <div className="App">
-      <header className='App-header'>Produtos</header>
-      <ProductForm name='Nome' description='Descrição' price={10}/>
+      <header className='App-header'>Gerenciar produtos</header>
+      <Products />
     </div>
   );
 }
