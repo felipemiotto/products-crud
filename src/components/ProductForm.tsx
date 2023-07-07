@@ -1,17 +1,16 @@
 import { FC, useState } from 'react';
 import { useForm } from "react-hook-form"
 
-interface Props {
-  id: number,
+interface FormData {
   name: string,
   description: string,
   price: number,
 }
 
-export const Product: FC<Props> = ({id, name, description, price}) => {
-  const { register, handleSubmit, formState: {errors} } = useForm();
+export const ProductForm: FC<FormData> = ({name, description, price}) => {
+  const { register, handleSubmit, formState: {errors} } = useForm<FormData>();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FormData) => {
     console.log(data)
   }
 
