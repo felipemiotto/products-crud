@@ -4,10 +4,10 @@ import { Product } from './Interfaces';
 interface ProductsTableProps {
   products: Product[];
   removeProduct: (id: number) => void
-  setProductToBeEdited: (product: Product) => void
+  setProductInEdition: (product: Product) => void
 }
 
-export const ProductsTable: FC<ProductsTableProps> = ({products, removeProduct, setProductToBeEdited}) => {
+export const ProductsTable: FC<ProductsTableProps> = ({products, removeProduct, setProductInEdition}) => {
   return (
     <div className='Product-table'>
       <h2>Produtos cadastrados</h2>
@@ -30,7 +30,7 @@ export const ProductsTable: FC<ProductsTableProps> = ({products, removeProduct, 
               <td>{product.description}</td>
               <td>{product.price}</td>
               <td>
-                <button onClick={() => setProductToBeEdited(product)}>Editar</button>
+                <button onClick={() => setProductInEdition(product)}>Editar</button>
                 <button onClick={() => removeProduct(product.id)}>Excluir</button>
               </td>
             </tr>
